@@ -1,4 +1,4 @@
-class Solution_1137_nth_tribonacci_number:
+class Solution:
     def __init__(self):
         pass
 
