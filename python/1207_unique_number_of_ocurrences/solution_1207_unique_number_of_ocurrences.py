@@ -3,7 +3,6 @@ class Solution(object):
         """
         :type arr: List[int]
         :rtype: bool
-        """
         if arr == []:
             return False
         n = len(arr)
@@ -21,3 +20,13 @@ class Solution(object):
             return False
         else:
             return True
+        """
+        if arr == []:
+            return "false"
+
+        ocurrences = dict()
+
+        for i in range(len(arr)):
+            ocurrences[arr[i]] = ocurrences.get(arr[i], 0) + 1
+
+        return len(ocurrences.values()) == len(set(ocurrences.values()))
