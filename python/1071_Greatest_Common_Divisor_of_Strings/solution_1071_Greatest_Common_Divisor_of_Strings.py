@@ -14,7 +14,7 @@ class Solution(object):
         if str1[:len(str2)] != str2:
             return ""
         # recursive with str1 without the str2 seen at then of str1
-        return self.gcdOfStrings(str1[:len(str2)],str2)
+        return self.gcdOfStrings(str1[len(str2):],str2)
 
 
         ############## EXPLAINED ##################
