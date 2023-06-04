@@ -7,16 +7,12 @@ class Solution(object):
         """
         if s == "":
             return True
-        if t == "":
-            return False
-        i = 0
-        j = 0
-        while i < len(s):
-            if j >= len(t):
-                return False
-            if s[i] == t[j]:
-                if i == len(s) - 1:
-                    return True
-                i += 1
-            j += 1
-
+        pointer_s = 0
+        pointer_t = 0
+        ns = len(s)
+        nt = len(t)
+        while pointer_s < ns and pointer_t < nt:
+            if t[pointer_t] ==  s[pointer_s]:
+                pointer_s += 1
+            pointer_t += 1
+        return pointer_s == ns
