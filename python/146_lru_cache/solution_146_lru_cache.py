@@ -22,11 +22,10 @@ class LRUCache(object):
         if doesExist != None:
             idx = self.filo.index(key)
             self.filo.pop(idx)
-            self.filo.insert(0,key)
+            self.filo.insert(0, key)
             return self.kv[key]
         else:
             return -1
-
 
     def put(self, key, value):
         """
@@ -39,5 +38,5 @@ class LRUCache(object):
             idx = self.filo.index(key)
             self.filo.pop(idx)
         self.kv[key] = value
-        self.filo.insert(0,key)
+        self.filo.insert(0, key)
         self.checkLen()
