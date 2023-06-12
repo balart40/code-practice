@@ -11,6 +11,7 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        """
         stack = []
         if head ==  None:
             return head
@@ -22,4 +23,17 @@ class Solution(object):
                 stack[i].next = stack[i + 1]
         stack[-1].next = None
         return stack[0]
-
+        """
+        # if head is None or is just one node return head
+        if head == None or head.next == None:
+            return head
+        # from here we are 2 or more
+        result = ListNode(0)
+        prev_node = None
+        current_node = head
+        while current_node:
+            next_node = current_node.next
+            current_node.next = prev_node
+            prev_node = current_node
+            current_node = next_node
+        return prev_node
