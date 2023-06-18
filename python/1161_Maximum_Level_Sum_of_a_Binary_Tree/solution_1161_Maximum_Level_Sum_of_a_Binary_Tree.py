@@ -15,12 +15,12 @@ class Solution(object):
         def in_order_traversal(node, level):
             if not node:
                 return
-            in_order_traversal(node.left, level+1)
+            in_order_traversal(node.left, level + 1)
             if level not in d:
                 d[level] = [node.val]
             else:
                 d[level].append(node.val)
-            in_order_traversal(node.right, level +1)
+            in_order_traversal(node.right, level + 1)
             return
 
         in_order_traversal(root, 1)
