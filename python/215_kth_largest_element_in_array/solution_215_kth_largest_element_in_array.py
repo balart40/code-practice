@@ -19,5 +19,10 @@ class Solution(object):
         """
 
         #Solution 2 two liner
-        heapq.heapify(nums)
-        return heapq.nlargest(k,nums)[-1]
+        #heapq.heapify(nums)
+        #return heapq.nlargest(k,nums)[-1]
+        # Solution 3
+        heap = []
+        for i in range(len(nums)):
+            heapq.heappush(heap, nums[i])
+        return heapq.nlargest(k, heap)[-1]
