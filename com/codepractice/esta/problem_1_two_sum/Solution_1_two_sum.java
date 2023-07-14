@@ -1,4 +1,8 @@
-class Solution {
+package codepractice.esta.problem_1_two_sum;
+
+import java.util.HashMap;
+
+public class Solution_1_two_sum {
     public int[] twoSum(int[] nums, int target) {
         int numToSearch = 0;
         int found = 0;
