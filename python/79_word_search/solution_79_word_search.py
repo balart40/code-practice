@@ -12,6 +12,7 @@ class Solution(object):
                 if self.get_words(board, word, i, j, visited):
                     # counter += 1
                     return True
+        # return counter
         return False
 
     def get_words(self, board, word, i, j, visited, pos = 0):
