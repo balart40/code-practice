@@ -9,5 +9,6 @@ class MyTestCase(unittest.TestCase):
         expected = 13
         self.assertEqual(expected, solution.count_ways_to_eat(n))
 
+
 if __name__ == '__main__':
     unittest.main()
