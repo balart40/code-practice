@@ -2,14 +2,7 @@ class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         needle_len = len(needle)
         haystack_len = len(haystack)
-        queue = collections.deque()
-
-        for i in range(haystack_len):
-            if haystack[i] == needle[0]:
-                queue.append(i)
-
-        if not queue:
-            return -1
+        queue = collections.deque([i for i in range(haystack_len) if haystack[i] == needle[0]])
 
         while queue:
             i = queue.popleft()
