@@ -5,8 +5,12 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-
-        #Solution 1
+        # ***** SOLUTION 1 *****
+        # nums.sort()
+        # nums = nums[::-1]
+        # return nums[k-1]
+        # Solution 2 *****
+        # **** SOLUTION 2
         """
         heap =  []
         n = len(nums)
