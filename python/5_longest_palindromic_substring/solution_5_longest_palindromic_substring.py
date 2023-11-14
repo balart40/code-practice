@@ -14,7 +14,7 @@ class Solution(object):
             return s1 if len(s1) > len(s2) else s2
 
         n = len(s)
-        res  = ""
+        res = ""
         for i in range(n):
             # res = max(findLongestPalindrome(s, i, i), findLongestPalindrome(s, i, i+1), res, key=len)
             temp = findLongestPalindrome(s, i, i)
