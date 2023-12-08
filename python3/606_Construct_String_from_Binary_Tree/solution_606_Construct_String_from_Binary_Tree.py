@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def tree2str(self, root: Optional[TreeNode]) -> str:
-
         def pre_order_rec(node):
             if not node: return
             result = str(node.val)
@@ -14,6 +13,6 @@ class Solution:
                 result += "(" + pre_order_rec(node.left) + ")"
             if node.right:
                 if not node.left: result += "()"
-                result += "("+ pre_order_rec(node.right) + ")"
+                result += "(" + pre_order_rec(node.right) + ")"
             return result
         return pre_order_rec(root)
